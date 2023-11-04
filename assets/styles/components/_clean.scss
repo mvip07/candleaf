@@ -1,0 +1,85 @@
+#clean {
+    width: 100%;
+    height: 100%;
+    margin-top: 84px;
+    background: $prod_bg;
+    padding: 0px 15px 0px 15px;
+
+    .d_flex {
+        display: flex;
+        padding: 133px 0;
+        align-items: center;
+        justify-content: space-between;
+
+        .sec_text {
+            .title {
+                width: 350px;
+                @include font($cl: $header_text, $pos: left, $fs: 40px, $fst: normal, $fw: 500, $lh: 46.6px);
+                letter-spacing: -0.9px;
+            }
+
+            .paragrph {
+                margin: 15px 0 38px 0;
+                @include font($cl: $grn, $pos: left, $fs: 16px, $fst: normal, $fw: 400, $lh: 22.8px);
+            }
+
+            .list_container {
+                .list_item {
+                    display: flex;
+                    align-items: center;
+                    @include font($cl: $black, $pos: left, $fs: 16px, $fst: normal, $fw: 400, $lh: 28.8px);
+
+                    i, strong {
+                        margin-right: 10px;
+                    }
+
+                    @media (max-width: 576px) {
+                        
+                        display: block;
+                     
+                    }
+                }
+            }
+
+            .btn {
+                border: none;
+                outline: none;
+                margin-top: 68px;
+                padding: 8px 44px;
+                border-radius: 4px;
+                background: var(--green, #56B280);
+                @include font($cl: $whi, $pos: center, $fs: 20.645px, $fst: normal, $fw: 500, $lh: normal);
+            }
+
+            @media (max-width: 768px) {
+                .title {
+                    width: 100%;
+                    @include font($cl: $header_text, $pos: left, $fs: 30px, $fst: normal, $fw: 500, $lh: 46.6px);
+                }
+            }
+        }
+
+        .sec_image {
+            width: 540px;
+            height: 390px;
+            background: $whi;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 8px;
+
+            @media (max-width: 576px) {
+                width: 100%;
+                height: 300px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        @media (max-width: 1100px) {
+            gap: 30px;
+            flex-wrap: wrap-reverse;
+            justify-content: center;
+        }
+    }
+}

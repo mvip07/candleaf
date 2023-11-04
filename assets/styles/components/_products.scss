@@ -1,0 +1,70 @@
+#product {
+    width: 100%;
+    height: 100%;
+    background: $whi;
+    padding: 90px 15px 84px 15px;
+
+    .pro_header {
+
+        .title {
+            @include font($cl: $prod_cl, $pos: center, $fs: 40px, $fst: normal, $fw: 500, $lh: 57.6px);
+            letter-spacing: -0.9px;
+
+            @media (max-width: 768px) {
+                @include font($cl: $prod_cl, $pos: center, $fs: 30px, $fst: normal, $fw: 500, $lh: 57.6px);    
+            }
+        }
+
+        .text {
+            margin-top: 15px;
+            @include font($cl: $prod_text, $pos: center, $fs: 18px, $fst: normal, $fw: 400, $lh: 27.6px);
+        }
+    }
+
+    .grid {
+        gap: 20px;
+        display: grid;
+        margin-top: 50px;
+        grid-template-columns: repeat(4, 1fr);
+
+        .grid_iteam {
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 8px;
+
+            .img {
+                width: 100%;
+                height: 155px;
+                text-align: center;
+                background: $prod_bg;
+
+                img {
+                    width: auto;
+                    height: 100%;
+                    
+                }
+            }
+
+            .grid_iteam_text {
+                width: 100%;
+                height: 75px;
+                background: $whi;
+                padding: 10px 26px 15px 26px;
+
+                .product_title {
+                    @include font($cl: $prod_title, $pos: left, $fs: 16px, $fst: normal, $fw: 500, $lh: 27.6px);
+                    letter-spacing: -0.9px;
+                }
+
+                .product_price {
+                    @include font($cl: $grn, $pos: right, $fs: 20px, $fst: normal, $fw: 500, $lh: 27.6px);
+                }
+            }
+        }
+
+        @media (max-width: 992px) {
+            grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+        }
+    }
+}

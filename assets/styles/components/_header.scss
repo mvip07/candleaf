@@ -1,0 +1,148 @@
+.header {
+    background: url('../images/img/header_bg.jpg');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .nav {
+        display: flex;
+        background: $whi;
+        padding: 20px 150px;
+        align-items: center;
+        justify-content: space-between;
+
+        .checkbtn {
+            float: right;
+            color: $black;
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            line-height: 80px;
+            margin-right: 20px;
+
+            @media (max-width: 420px) {
+                margin-right: 0px;
+            }
+
+            @media (max-width: 992px) {
+                display: block;
+                margin-top: 5px;
+            }
+        }
+
+        #check {
+            display: none;
+        }
+
+        .logo {
+            width: 126px;
+            height: 34px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .nav_list {
+            list-style: none;
+
+            .list_item {
+                padding: 0 18px;
+                display: inline-block;
+
+                .nav_link {
+                    text-decoration: none;
+                    @include font ($cl: $nav_link_cr, $pos: center, $fs: 16px, $fst: normal, $fw: 500, $lh: normal);
+                }
+            }
+
+            @media (max-width: 992px) {
+                top: 0px;
+                left: -100%;
+                height: 100vh;
+                position: fixed;
+                z-index: 100000;
+                max-width: 250px;
+                min-width: 250px;
+                transition: all 1s;
+                text-align: center;
+                background: $prod_bg;
+                border-radius: 0 20px 20px 0;
+
+                .list_item {
+                    display: block;
+                    margin-top: 50px;
+                    @include font ($cl: $whi, $pos: center, $fs: 16px, $fst: normal, $fw: 500, $lh: normal);
+                }
+            }
+        }
+
+        .icon i {
+            margin: 0 10px;
+            font-size: 24px;
+
+            @media (max-width: 992px) {
+                display: none;
+            }
+        }
+
+        @media (max-width: 992px) {
+            padding: 20px 30px;
+
+            #check:checked~ul {
+                left: 0;
+            } 
+        }
+    }
+
+    .content {
+        width: 730px;
+        height: 349px;
+        padding: 33px 95px;
+        border-radius: 2px;
+        margin: 170px auto 0 auto;
+        backdrop-filter: blur(12px);
+        background: rgba(247, 248, 250, 0.80);
+
+        .title {
+            @include font($cl: $header_text, $pos: center, $fs: 40px, $fst: normal, $fw: 500, $lh: 57.6px);
+        }
+
+        .text {
+            @include font($cl: $header_text, $pos: center, $fs: 18px, $fst: normal, $fw: 400, $lh: 25.6px);
+        }
+
+        .btn {
+            outline: none;
+            border: none;
+            background: $grn;
+            margin-top: 45px;
+            padding: 8px 44px;
+            border-radius: 4px;
+            @include font($cl: $whi, $pos: center, $fs: 20.645px, $fst: normal, $fw: 500, $lh: 27.645px);
+        }
+
+        @media (max-width: 768px) {
+            width: 90%;
+            padding: 22px 15px;
+            margin: 120px auto 0 auto;
+    
+            .title {
+                @include font($cl: $header_text, $pos: center, $fs: 26px, $fst: normal, $fw: 500, $lh: 57.6px);
+            }
+    
+            .text {
+                @include font($cl: $header_text, $pos: center, $fs: 14px, $fst: normal, $fw: 400, $lh: 22.6px);
+            }
+    
+            .btn {
+                margin-top: 35px;
+                padding: 8px 22px;
+                @include font($cl: $whi, $pos: center, $fs: 14px, $fst: normal, $fw: 400, $lh: 22.8px);
+            }
+        }
+    }
+}
